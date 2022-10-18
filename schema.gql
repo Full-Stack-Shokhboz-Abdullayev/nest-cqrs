@@ -1,0 +1,52 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type SuccessModel {
+  success: Boolean!
+}
+
+type HouseStateModel {
+  id: Int!
+  water: Boolean!
+  gas: Boolean!
+  electricity: Boolean!
+  fireplace: Boolean!
+  cameras: Boolean!
+}
+
+type Query {
+  getSmartHouses: [HouseStateModel!]!
+  getSmartHouse(params: GetHouseInput!): HouseStateModel!
+}
+
+input GetHouseInput {
+  houseId: Int!
+}
+
+type Mutation {
+  deleteSmartHouse(params: DeleteHouseInput!): SuccessModel!
+  createSmartHouse(params: CreateHouseInput!): HouseStateModel!
+  updateSmartHouse(params: UpdateHouseInput!): HouseStateModel!
+}
+
+input DeleteHouseInput {
+  houseId: Int!
+}
+
+input CreateHouseInput {
+  water: Boolean!
+  gas: Boolean!
+  electricity: Boolean!
+  fireplace: Boolean!
+  cameras: Boolean!
+}
+
+input UpdateHouseInput {
+  houseId: Int!
+  water: Boolean
+  gas: Boolean
+  electricity: Boolean
+  fireplace: Boolean
+  cameras: Boolean
+}

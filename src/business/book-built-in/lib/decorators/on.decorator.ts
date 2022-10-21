@@ -6,7 +6,9 @@ export const CustomSetMetadata = <K = string>(metadataKey: K): any => {
 
     return target;
   };
+
   decoratorFactory.KEY = metadataKey;
+
   return decoratorFactory;
 };
 export const On = () => CustomSetMetadata(NEST_EVENT_ON);

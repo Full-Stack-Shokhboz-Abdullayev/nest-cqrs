@@ -4,6 +4,7 @@ import { BookRepository } from 'src/business/book-built-in/book.repository';
 import { BookResolver } from 'src/business/book-built-in/book.resolver';
 import { LoggerService } from 'src/business/book-built-in/logger.service';
 import { OtherConsumer } from 'src/business/book-built-in/other.consumer';
+import { OtherRepository } from 'src/business/book-built-in/other.repository';
 
 @Module({
   providers: [
@@ -11,7 +12,8 @@ import { OtherConsumer } from 'src/business/book-built-in/other.consumer';
     BookRepository,
     BookConsumer,
     BookResolver,
-    // OtherConsumer,
+    OtherConsumer,
+    OtherRepository,
   ],
 })
 export class BookModule {}

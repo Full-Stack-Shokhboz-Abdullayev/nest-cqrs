@@ -13,4 +13,6 @@ type Query {
 type Mutation {
   createBook: SuccessModel!
   deleteBook: SuccessModel!
+  createOther: SuccessModel!
+  deleteOther: SuccessModel!
 }

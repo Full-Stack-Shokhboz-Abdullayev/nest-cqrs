@@ -3,16 +3,16 @@ import { Watcher } from 'src/business/book-built-in/lib/decorators';
 
 @Injectable()
 @Watcher()
-export class BookRepository {
+export class OtherRepository {
   create(payload: { title: string }): string {
-    console.log('create new data', payload);
+    console.log('create other data', payload);
     return JSON.stringify(payload);
   }
 
   delete(payload: number): {
     cool: string;
   } {
-    console.log('del data', payload);
+    console.log('del other data', payload);
     return {
       cool: 'yeah',
     };

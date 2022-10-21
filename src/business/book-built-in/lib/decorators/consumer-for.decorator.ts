@@ -4,7 +4,7 @@ const CustomSetMetadata = <K = string, V = any>(
   metadataKey: K,
   repository: V,
 ): any => {
-  const decoratorFactory = (target: object, key?: any, descriptor?: any) => {
+  const decoratorFactory = (target: object) => {
     Reflect.defineMetadata(
       metadataKey,
       { repository: repository, consumer: target },
